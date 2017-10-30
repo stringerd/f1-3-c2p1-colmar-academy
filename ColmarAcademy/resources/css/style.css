@@ -1,0 +1,492 @@
+html {
+  font-size: 16px;
+  font-family: "PT Sans";
+  color: #393939;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+  }
+}
+
+.container {
+  width: 1200px;
+}
+
+/**********************************************
+ Header section
+***********************************************/
+
+header {
+  background-color: snow;
+  padding: 1rem 0;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-family: "Comfortaa";
+  flex-grow: 1;
+}
+
+.logo img {
+  height: 2rem;
+}
+
+.logo.strong {
+  font-weight: 700;
+  color: #333333;
+}
+
+.logo.light {
+  font-weight: 300;
+  color: gray;
+}
+
+header nav {
+  display: flex;
+  margin-right: 0.5rem;
+}
+
+header nav li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+header nav a:hover {
+  color: blue;
+}
+
+#mobile-nav {
+  display: none;
+  margin: 0 1.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    width: 100%;
+  }
+
+  #mobile-nav {
+    width: 100%;
+  }
+
+  #mobile-nav ul {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  #logo, #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: inherit;
+  }
+
+}
+
+/**********************************************
+ Repeated styles
+***********************************************/
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-middle {
+  justify-content: center;
+}
+
+.container-full-width {
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.container {
+  width: 1200px;
+  justify-content: center;
+}
+
+.dark-bg {
+  background-color: #dddddd;
+}
+
+.large-section {
+  width: 60%;
+  padding-right: 1.5rem;
+}
+
+.small-section {
+  width: 40%;
+}
+
+.img-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-container img,
+.img-container-35 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1.large-header {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+p.large-p {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .container-full-width {
+    padding: 0;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  #banner .container {
+    flex-direction: column;
+  }
+
+  .large-section, .small-section {
+    width: auto;
+    padding: 0;
+  }
+
+  #banner .small-section {
+    padding: 2rem 1rem;
+  }
+
+}
+
+
+/**********************************************
+ Top content / banner section
+***********************************************/
+
+.banner-content a {
+  display: inline-block;
+  background-color: #393939;
+  color: snow;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 80%;
+}
+
+.banner-content a:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .banner-content a {
+    width: 100%;
+    background-color: #a1a1a1;
+    font-weight: bold;
+  }
+}
+
+/**********************************************
+ Information / courses section
+***********************************************/
+
+#info .small-section {
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  margin-top: -2rem;
+  padding-top: 2rem;
+  margin-bottom: -2rem;
+  padding-bottom: 2rem;
+}
+
+#info .small-section div:first-child,
+#thesis .small-section div:first-child {
+  padding-top: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  #info {
+    border-bottom: 1px solid lightgray;
+  }
+
+  #info .large-section {
+    display: none;
+  }
+}
+
+
+h2.caption-head-large {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 2rem 0 1.5rem 0;
+}
+
+h2.caption-head-small {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+p.caption-text-large {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+p.caption-text-small {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+p.caption-source {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+img.mobile-img {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  img.mobile-img {
+    display: block;
+  }
+
+  img.desktop-img {
+    display: none;
+  }
+}
+
+
+.info-block {
+  padding: 1rem;
+  border-bottom: 3px solid #dddddd;
+}
+
+@media only screen and (max-width: 800px) {
+  .info-block {
+    flex-direction: column;
+  }
+}
+
+.img-container-35 {
+  width: 35%;
+  overflow: hidden;
+}
+
+.info-container {
+  margin-left: 1rem;
+  width: 65%;
+}
+
+@media only screen and (max-width: 800px) {
+  .info-block {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border: 0;
+  }
+
+  .info-block .img-container-35,
+  .info-block .info-container {
+    width: auto;
+    padding: 0;
+  }
+
+  .info-container {
+    margin-left: 0;
+  }
+
+  #info .small-section .info-block:first-child {
+    padding-top: 1rem;
+    margin-top: 0;
+  }
+
+  #info .small-section {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    border: 0;
+  }
+
+}
+
+h4.info-title,
+h4.course-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h4.info-title,
+h4.course-title,
+p.info-content,
+p.course-label {
+  margin-bottom: 0.5rem;
+}
+
+p.info-content,
+p.course-label,
+p.course-content,
+a.info-link {
+  font-size: 1rem;
+}
+
+a.info-link {
+  color: royalblue;
+}
+
+.info-block:hover,
+.course-block:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.large-header.center-title {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.course-block-container {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.course-block {
+  max-width: 30%;
+  min-width: 250px;
+  background-color: white;
+  flex: 1;
+  margin: 2rem 1rem 0 1rem;
+}
+
+.course-block:hover img {
+  filter: contrast(200%);
+}
+
+.course-info-container {
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  #courses {
+    background-color: white;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 1.5rem;
+  }
+
+  #courses .large-header {
+    margin: 2rem 0 1rem 0;
+  }
+
+  .course-block .img-container {
+    display: none;
+  }
+
+  .course-block p {
+    display: none;
+  }
+
+  .course-block {
+    max-width: 100%;
+    min-width: 100%;
+    background-color: #d1d1d1;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .course-info-container {
+    padding: 1rem 0.25rem 1.5rem 1rem;
+    margin: 0;
+  }
+
+}
+
+/**********************************************
+ Thesis section
+***********************************************/
+
+#thesis .large-header {
+  margin-bottom: 2rem;
+}
+
+#thesis .info-block {
+  border-bottom: 1px solid #dddddd;
+}
+
+#thesis .info-block:last-child {
+  border-bottom: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  #thesis {
+    margin-bottom: 1.5rem;
+  }
+
+  #thesis .large-header {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #thesis .large-section .img-caption-small {
+    display: none;
+  }
+
+  #thesis .small-section {
+    display: none;
+  }
+}
+
+/**********************************************
+ Footer
+***********************************************/
+
+footer {
+  padding: 1rem 1.5rem;
+  font-size: 0.825rem;
+  color: #595959;
+  border-top: 1px solid #dddddd;
+}
+
+footer .foot-logo {
+  flex-grow: 1;
+}
+
+footer .foot-links a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #595959;
+}
+
+.foot-links a:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .foot-links {
+    display: none;
+  }
+}
